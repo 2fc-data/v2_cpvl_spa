@@ -288,7 +288,10 @@ export const PilotDetails = () => {
       <div className="flex flex-row items-center justify-center gap-4">
         <div>
           <Dialog open={isEditModalOpen} onOpenChange={setIsEditModalOpen}>
-            <DialogContent className="sm:max-w-4xl rounded-3xl border-none shadow-2xl bg-white/95 backdrop-blur-xl p-0 overflow-hidden">
+            <DialogContent 
+              className="sm:max-w-4xl rounded-3xl border-none shadow-2xl bg-white/95 backdrop-blur-xl p-0 overflow-hidden"
+              closeClassName="text-white bg-slate-900/40 hover:bg-slate-900/60 p-2 rounded-full [&_svg]:size-6 transition-all border-none shadow-lg z-50"
+            >
               {pilot && (
                 <EditProfile
                   userId={pilot.userId}
@@ -301,7 +304,10 @@ export const PilotDetails = () => {
 
         <div>
           <Dialog open={isEmergencyContactOpen} onOpenChange={setIsEmergencyContactOpen}>
-            <DialogContent className="sm:max-w-3xl rounded-3xl border-none shadow-2xl bg-white/95 backdrop-blur-xl p-0 overflow-hidden">
+            <DialogContent 
+              className="sm:max-w-3xl rounded-3xl border-none shadow-2xl bg-white/95 backdrop-blur-xl p-0 overflow-hidden"
+              closeClassName="text-white bg-slate-900/40 hover:bg-slate-900/60 p-2 rounded-full [&_svg]:size-6 transition-all border-none shadow-lg z-50"
+            >
               {pilot && (
                 <EmergencyContact
                   userId={pilot.userId}

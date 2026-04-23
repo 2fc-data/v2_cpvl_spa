@@ -131,6 +131,13 @@ export const LicenseData: React.FC<LicenseDataProps> = ({
         url: getURI(`${API.licenseData}/${userId}`),
         method: 'GET'
       });
+
+      // Close modal after success
+      if (onClose) {
+        setTimeout(() => {
+          onClose();
+        }, 1500);
+      }
     } catch (err) {
       setIsSubmitting(false);
       setFormError('Falha ao salvar os dados.');

@@ -72,7 +72,8 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
     }
   }, [fetchProfile, profile, isLogged, loading]);
 
-  const isAdmin = profile?.user?.role === 'admin' ||
+  const isAdmin = profile?.user?.role === 'admin' || 
+    profile?.user?.role === 'fiscal' ||
     (profile?.routes || []).some(r => r.route === 'pilots');
 
   const value = React.useMemo(() => ({
