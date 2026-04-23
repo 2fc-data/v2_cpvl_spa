@@ -102,7 +102,7 @@ export const EspacoAereo = () => {
             <ScrollReveal delay={200}>
               <div className="bg-card rounded-xl p-6 border border-border shadow-sm">
                 <h3 className="text-lg font-heading font-bold text-foreground mb-1 flex items-center gap-2">
-                  <MapPin size={18} className="text-secondary" />
+                  <MapPin size={18} className="text-primary" />
                   Flymaster &amp; XCTrack
                 </h3>
                 <p className="text-xs text-muted-foreground mb-4">Way Points</p>
@@ -116,10 +116,10 @@ export const EspacoAereo = () => {
                       <a
                         href={`/wp/flymaster-xctrack/${wp.file}`}
                         download
-                        className="p-1 hover:text-secondary transition-colors"
+                        className="p-1 hover:text-primary transition-colors"
                         title={`Download ${wp.name}`}
                       >
-                        <Download size={14} className="text-muted-foreground group-hover:text-secondary" />
+                        <Download size={18} className="text-muted-foreground group-hover:text-primary" />
                       </a>
                     </li>
                   ))}
@@ -131,7 +131,7 @@ export const EspacoAereo = () => {
             <ScrollReveal delay={300}>
               <div className="bg-card rounded-xl p-6 border border-border shadow-sm">
                 <h3 className="text-lg font-heading font-bold text-foreground mb-1 flex items-center gap-2">
-                  <MapPin size={18} className="text-secondary" />
+                  <MapPin size={18} className="text-primary" />
                   Naviter (SeeYou)
                 </h3>
                 <p className="text-xs text-muted-foreground mb-4">Espaço Aéreo Condicionado</p>
@@ -140,10 +140,10 @@ export const EspacoAereo = () => {
                   <a
                     href="/wp/naviter/eacp_sul_de_minas.txt"
                     download
-                    className="p-1 hover:text-secondary transition-colors"
+                    className="p-1 hover:text-primary transition-colors"
                     title="Download Espaço Aéreo Sul de Minas"
                   >
-                    <Download size={14} className="text-muted-foreground group-hover:text-secondary" />
+                    <Download size={18} className="text-muted-foreground group-hover:text-primary" />
                   </a>
                 </div>
               </div>

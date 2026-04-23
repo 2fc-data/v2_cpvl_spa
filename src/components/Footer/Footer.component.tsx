@@ -3,12 +3,12 @@ import logo from "@/assets/images/cpvlLogoVet1.png";
 
 export const Footer = () => {
   return (
-    <footer className="bg-muted/50 dark:bg-card/30 border-t border-border text-foreground transition-colors duration-500">
+    <footer className="bg-muted/50 dark:bg-card/80 border-t border-border text-foreground transition-colors duration-500">
       <div className="container mx-auto max-w-6xl px-4 py-12 lg:px-8">
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-10">
           {/* Logo & copyright */}
           <div className="space-y-4">
-            <img src={logo} alt="CPVL" className="h-21 w-auto" />
+            <img src={logo} alt="CPVL" className="h-21 w-auto bg-white p-2 rounded-sm" />
             <p className="text-sm text-muted-foreground font-body">
               Clube Poçoscaldense de Vôo Livre
             </p>

@@ -11,8 +11,8 @@ export const DataPanel = () => {
     url: getURI(API.stats)
   });
 
-  const pilotStatusData = statsResponse?.data?.pilotStatusData || [];
-  const paymentStatusData = statsResponse?.data?.paymentStatusData || [];
+  const pilotStatusData = statsResponse?.pilotStatusData || [];
+  const paymentStatusData = statsResponse?.paymentStatusData || [];
 
   return (
     <div className="flex flex-col gap-8 p-4 md:p-8 animate-in fade-in duration-700">

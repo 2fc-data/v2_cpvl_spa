@@ -43,10 +43,10 @@ export const Hero = () => {
       </div>
 
       <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-4 pointer-events-none">
-        <h4 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-heading font-black text-foreground dark:text-primary-foreground tracking-tight mb-4 drop-shadow-xl dark:drop-shadow-[0_4px_20px_rgba(0,0,0,0.5)] transition-colors duration-500">
+        <h4 className="text-xl sm:text-2xl md:text-3xl lg:text-5xl font-artistic font-black text-sky tracking-wider mb-4 drop-shadow-[0_4px_12px_rgba(0,0,0,0.5)] transition-colors duration-500 uppercase">
           Clube Poçoscaldense de Vôo Livre
         </h4>
-        <h1 className="text-lg sm:text-xl text-foreground/80 dark:text-primary-foreground/80 font-body max-w-2xl drop-shadow-lg transition-colors duration-500">
+        <h1 className="text-lg sm:text-xl md:text-2xl lg:text-2xl text-white/90 font-body max-w-2xl drop-shadow-md transition-colors duration-500 font-medium">
           Desafios e Conquistas
         </h1>
       </div>
@@ -54,17 +54,17 @@ export const Hero = () => {
       {/* Nav arrows */}
       <button
         onClick={prev}
-        className="absolute left-4 top-1/2 -translate-y-1/2 bg-card/15 backdrop-blur-sm hover:bg-card/50 active:scale-90 rounded-full p-2 text-primary-foreground transition-all z-20"
+        className="absolute left-4 top-1/2 -translate-y-1/2 bg-white/10 backdrop-blur-md hover:bg-primary/20 active:scale-90 rounded-full p-3 text-white transition-all z-20 border border-white/20"
         aria-label="Anterior"
       >
-        <ChevronLeft size={21} />
+        <ChevronLeft size={24} />
       </button>
       <button
         onClick={next}
-        className="absolute right-4 top-1/2 -translate-y-1/2 bg-card/15 backdrop-blur-sm hover:bg-card/50 active:scale-90 rounded-full p-2 text-primary-foreground transition-all z-20"
+        className="absolute right-4 top-1/2 -translate-y-1/2 bg-white/10 backdrop-blur-md hover:bg-primary/20 active:scale-90 rounded-full p-3 text-white transition-all z-20 border border-white/20"
         aria-label="Próximo"
       >
-        <ChevronRight size={21} />
+        <ChevronRight size={24} />
       </button>
 
       {/* Dots */}

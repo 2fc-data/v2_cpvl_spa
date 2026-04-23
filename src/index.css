@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&family=Flamenco:wght@300;400&family=Inter:wght@400;500;600;700&family=Bebas+Neue&display=swap');
 @import "tailwindcss";
 @plugin "tailwindcss-animate";
 
@@ -6,36 +7,51 @@
 /* ========================================
    CSS Variables (Premium OKLCH Palette)
    ======================================== */
+@layer base {
+  button,
+  [role="button"],
+  [role="link"],
+  a,
+  select,
+  label,
+  summary,
+  input[type="checkbox"],
+  input[type="radio"],
+  .cursor-pointer-all {
+    @apply cursor-pointer;
+  }
+}
+
 :root {
   color-scheme: light dark;
 
-  /* Light Theme - Clean Sky & Deep Navy */
-  --background: oklch(0.985 0.01 240);
-  --foreground: oklch(0.15 0.04 250);
+  /* Light Theme - Ice Grey & Sky Blue */
+  --background: oklch(0.97 0.005 240);
+  --foreground: oklch(0.15 0.01 240);
 
-  --card: oklch(1 0 0);
-  --card-foreground: oklch(0.15 0.04 250);
+  --card: oklch(0.96 0.005 240);
+  --card-foreground: oklch(0.15 0.01 240);
 
-  --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.15 0.04 250);
+  --popover: oklch(0.96 0.005 240);
+  --popover-foreground: oklch(0.15 0.01 240);
 
-  --primary: oklch(0.55 0.18 220);
-  --primary-foreground: oklch(0.985 0.01 240);
+  --primary: oklch(0.65 0.16 220);
+  --primary-foreground: oklch(0.97 0.005 240);
 
-  --secondary: oklch(0.94 0.02 240);
-  --secondary-foreground: oklch(0.2 0.04 250);
+  --secondary: oklch(0.94 0.008 240);
+  --secondary-foreground: oklch(0.2 0.01 240);
 
-  --accent: oklch(0.94 0.02 240);
-  --accent-foreground: oklch(0.2 0.04 250);
+  --accent: oklch(0.65 0.16 220 / 0.1);
+  --accent-foreground: oklch(0.6 0.16 220);
 
-  --muted: oklch(0.94 0.02 240);
-  --muted-foreground: oklch(0.45 0.04 250);
+  --muted: oklch(0.94 0.008 240);
+  --muted-foreground: oklch(0.45 0.01 240);
 
   --destructive: oklch(0.6 0.18 25);
-  --destructive-foreground: oklch(0.985 0.01 240);
+  --destructive-foreground: oklch(0.97 0.005 240);
 
-  --border: oklch(0.9 0.02 240);
-  --input: oklch(0.9 0.02 240);
+  --border: oklch(0.9 0.008 240);
+  --input: oklch(0.92 0.008 240);
   --ring: oklch(0.55 0.18 220 / 0.5);
 
   --radius: 0.75rem;
@@ -43,7 +59,7 @@
   /* Brand Accents */
   --sky: oklch(0.65 0.16 220);
   --mountain: oklch(0.45 0.08 155);
-  --gold: oklch(0.82 0.15 85);
+  --gold: oklch(0.75 0.12 85);
   --navy: oklch(0.2 0.04 250);
 
   /* Gradients */
@@ -52,42 +68,42 @@
   --gradient-gold: linear-gradient(135deg, oklch(0.82 0.15 85), oklch(0.7 0.15 80));
 
   /* Shadows */
-  --shadow-soft: 0 4px 20px -2px oklch(20% 0.04 250 / 0.05);
-  --shadow-elevated: 0 12px 40px -8px oklch(20% 0.04 250 / 0.12);
+  --shadow-soft: 0 4px 20px -2px oklch(20% 0.01 240 / 0.05);
+  --shadow-elevated: 0 12px 40px -8px oklch(20% 0.01 240 / 0.12);
 }
 
 .dark {
-  /* Dark Theme - Deep Obsidian & Soft Cyan */
-  --background: oklch(0.14 0.02 255);
-  --foreground: oklch(0.93 0.01 255);
+  /* Dark Theme - Pure Graphite & Sky Cyan */
+  --background: oklch(0.15 0.01 240);
+  --foreground: oklch(0.93 0.01 240);
 
-  --card: oklch(0.18 0.02 255);
-  --card-foreground: oklch(0.93 0.01 255);
+  --card: oklch(0.18 0.01 240);
+  --card-foreground: oklch(0.93 0.01 240);
 
-  --popover: oklch(0.18 0.02 255);
-  --popover-foreground: oklch(0.93 0.01 255);
+  --popover: oklch(0.18 0.01 240);
+  --popover-foreground: oklch(0.93 0.01 240);
 
   --primary: oklch(0.65 0.14 220);
-  --primary-foreground: oklch(0.14 0.02 255);
+  --primary-foreground: oklch(0.15 0.01 240);
 
-  --secondary: oklch(0.22 0.02 255);
-  --secondary-foreground: oklch(0.93 0.01 255);
+  --secondary: oklch(0.20 0.01 240);
+  --secondary-foreground: oklch(0.93 0.01 240);
 
-  --accent: oklch(0.22 0.02 255);
-  --accent-foreground: oklch(0.93 0.01 255);
+  --accent: oklch(0.20 0.01 240);
+  --accent-foreground: oklch(0.93 0.01 240);
 
-  --muted: oklch(0.22 0.02 255);
-  --muted-foreground: oklch(0.65 0.02 255);
+  --muted: oklch(0.20 0.01 240);
+  --muted-foreground: oklch(0.65 0.01 240);
 
   --destructive: oklch(0.55 0.22 25);
-  --destructive-foreground: oklch(0.93 0.01 255);
+  --destructive-foreground: oklch(0.93 0.01 240);
 
   --border: oklch(1 0 0 / 12%);
   --input: oklch(1 0 0 / 12%);
   --ring: oklch(0.65 0.14 220 / 0.4);
 
   /* Gradients Dark */
-  --gradient-hero: linear-gradient(135deg, oklch(0.14 0.02 255), oklch(0.1 0.02 255));
+  --gradient-hero: linear-gradient(135deg, oklch(0.15 0.01 240), oklch(0.12 0.01 240));
   --gradient-sky: linear-gradient(90deg, oklch(0.65 0.14 220), oklch(0.85 0.1 220));
   --gradient-gold: linear-gradient(135deg, oklch(0.82 0.15 85), oklch(0.6 0.15 80));
 
@@ -95,6 +111,7 @@
   --shadow-soft: 0 4px 20px -2px rgba(0, 0, 0, 0.4);
   --shadow-elevated: 0 12px 40px -8px rgba(0, 0, 0, 0.6);
 }
+
 
 /* ========================================
    Tailwind v4 Theme Integration
@@ -139,6 +156,8 @@
   /* Fonts */
   --font-sans: "Inter", sans-serif;
   --font-display: "Bebas Neue", sans-serif;
+  --font-artistic: "Cinzel", serif;
+  --font-script: "Flamenco", cursive;
   --font-heading: var(--font-display);
   --font-body: var(--font-sans);
 
@@ -257,7 +276,15 @@
   body {
     @apply bg-background text-foreground antialiased;
     font-family: var(--font-sans);
-    @apply bg-background text-foreground;
+  }
+
+  /* Standard Icon Colors */
+  svg.lucide {
+    @apply text-current transition-colors duration-300;
+  }
+
+  .icon-primary {
+    @apply text-primary;
   }
 
   h1,
@@ -283,8 +310,8 @@
     @apply transition-colors duration-500;
     background: linear-gradient(
       to bottom,
-      rgba(255, 255, 255, 0.4),
-      rgba(255, 255, 255, 0.2)
+      rgba(0, 0, 0, 0.45),
+      rgba(0, 0, 0, 0.3)
     );
   }
 
@@ -312,14 +339,20 @@
 
   .btn-gold {
     background: var(--gradient-gold);
-    color: var(--navy);
-    box-shadow: var(--shadow-gold);
-    transition: all 0.3s ease;
+    color: oklch(0.15 0.04 250);
+    box-shadow: 0 4px 15px -3px oklch(75% 0.12 85 / 0.3);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   }
 
   .btn-gold:hover {
     transform: translateY(-2px);
-    box-shadow: 0 12px 40px -6px oklch(78% 0.17 85 / 0.5);
+    box-shadow: 0 8px 25px -5px oklch(75% 0.12 85 / 0.5);
+    filter: brightness(1.05);
+  }
+
+  /* Standard Button Hover for ghost/outline */
+  .btn-hover-effect {
+    @apply hover:bg-primary/10 hover:text-primary transition-all duration-300;
   }
 
   .btn-whatsapp {
@@ -373,6 +406,19 @@
 
   .animate-pulse-slow {
     animation: pulse 4s ease-in-out infinite;
+  }
+
+  .nav-link-hover {
+    @apply relative transition-all duration-300;
+  }
+  
+  .nav-link-hover::after {
+    content: "";
+    @apply absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-300 rounded-full;
+  }
+  
+  .nav-link-hover:hover::after {
+    @apply w-full;
   }
 
   .text-shadow-hero {

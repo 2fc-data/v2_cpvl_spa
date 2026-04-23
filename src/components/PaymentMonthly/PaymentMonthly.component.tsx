@@ -625,8 +625,8 @@ export const PaymentMonthly: React.FC<PaymentMonthlyProps> = ({
           <AccordionItem value="panel1" className="border-none">
             <AccordionTrigger className="px-6 py-4 hover:no-underline bg-muted/10 group">
               <div className="flex items-center gap-4">
-                <div className="bg-blue-500/10 p-2 rounded-xl text-blue-500 group-hover:bg-blue-500/20 transition-colors">
-                  <CreditCard className="h-6 w-6" />
+                <div className="bg-primary/10 p-2 rounded-xl text-primary group-hover:bg-primary/20 transition-colors">
+                  <CreditCard className="h-6 w-6 icon-primary" />
                 </div>
                 <div className="text-left">
                   <h3 className="text-lg font-bold text-primary">
@@ -673,7 +673,7 @@ export const PaymentMonthly: React.FC<PaymentMonthlyProps> = ({
                         const isFirstInBatch = batchInfo?.isFirst;
 
                         return (
-                          <TableRow key={payment.id || index} className={cn(isCurrentMonth && "bg-blue-500/5")}>
+                          <TableRow key={payment.id || index} className={cn(isCurrentMonth && "bg-primary/5")}>
                             <TableCell className="text-center">
                               <Badge
                                 variant={isCurrentMonth ? "default" : "secondary"}
@@ -773,7 +773,7 @@ export const PaymentMonthly: React.FC<PaymentMonthlyProps> = ({
                 </Table>
               </div>
 
-              <div className="p-6 bg-blue-500/5 flex flex-col sm:flex-row items-center justify-between gap-4 border-t">
+              <div className="p-6 bg-primary/5 flex flex-col sm:flex-row items-center justify-between gap-4 border-t">
                 <div className="flex items-center gap-3">
                   <div className="bg-green-500/10 p-2 rounded-full text-green-600">
                     <TrendingUp size={20} />

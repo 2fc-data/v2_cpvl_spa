@@ -103,7 +103,7 @@ export const StatusList = () => {
           <nav className="flex text-sm text-muted-foreground/60 transition-colors">
             <button
               onClick={() => navigate('/dashboard')}
-              className="hover:text-primary transition-colors cursor-pointer"
+              className="hover:text-primary transition-colors cursor-pointer font-bold"
             >
               Dashboard
             </button>
@@ -115,7 +115,7 @@ export const StatusList = () => {
             )}
           </nav>
           <h1 className="text-2xl font-black tracking-tight flex items-center gap-2">
-            <Users className="text-primary h-6 w-6" />
+            <Users className="icon-primary h-6 w-6" />
             Status de Decolagem
           </h1>
         </div>
@@ -135,7 +135,7 @@ export const StatusList = () => {
           <CardHeader className="bg-primary/5 py-4 border-b border-border">
             <div className="flex items-center justify-between flex-wrap gap-2">
               <CardTitle className="text-lg font-bold text-primary flex items-center gap-2">
-                <Calendar className="h-4 w-4" />
+                <Calendar className="icon-primary h-4 w-4" />
                 Liberados para decolagem
               </CardTitle>
               <div className="flex items-center gap-2 text-xs font-mono text-muted-foreground">

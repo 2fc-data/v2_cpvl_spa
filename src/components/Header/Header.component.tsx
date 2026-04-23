@@ -40,7 +40,7 @@ export const Header = () => {
     >
       <div className="container mx-auto flex items-center justify-between h-20 px-4 lg:px-8 animate-fade-in">
         <a href="#" className="flex items-center gap-2">
-          <img src={logo} alt="CPVL Logo" className="h-18 w-auto" />
+          <img src={logo} alt="CPVL Logo" className="h-18 w-auto bg-white p-2 rounded-sm" />
         </a>
 
         {/* Desktop nav */}
@@ -49,7 +49,7 @@ export const Header = () => {
             <a
               key={l.href}
               href={l.href}
-              className={`text-sm font-medium transition-colors duration-300 ${scrolled
+              className={`text-sm font-medium transition-colors duration-300 nav-link-hover ${scrolled
                 ? "text-foreground/70 hover:text-primary"
                 : "text-white/80 hover:text-white drop-shadow-md"
                 }`}
@@ -62,7 +62,7 @@ export const Header = () => {
           {/* Theme Toggle */}
           <DropdownMenu>
             <DropdownMenuTrigger asChild>
-              <Button variant="ghost" size="icon" className={`rounded-xl w-10 h-10 transition-all ${scrolled ? "text-foreground hover:bg-accent" : "text-white hover:bg-white/10"}`}>
+              <Button variant="ghost" size="icon" className={`rounded-xl w-10 h-10 transition-all btn-hover-effect ${scrolled ? "text-foreground" : "text-white"}`}>
                 <Sun className="h-[1.2rem] w-[1.2rem] rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
                 <Moon className="absolute h-[1.2rem] w-[1.2rem] rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
                 <span className="sr-only">Alternar tema</span>
@@ -97,7 +97,7 @@ export const Header = () => {
         <div className="flex items-center gap-4 md:hidden">
           <DropdownMenu>
             <DropdownMenuTrigger asChild>
-              <Button variant="ghost" size="icon" className={`rounded-xl w-10 h-10 transition-all ${scrolled ? "text-foreground hover:bg-accent" : "text-white hover:bg-white/10"}`}>
+              <Button variant="ghost" size="icon" className={`rounded-xl w-10 h-10 transition-all btn-hover-effect ${scrolled ? "text-foreground" : "text-white"}`}>
                 <Sun className="h-[1.2rem] w-[1.2rem] rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
                 <Moon className="absolute h-[1.2rem] w-[1.2rem] rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
                 <span className="sr-only">Alternar tema</span>

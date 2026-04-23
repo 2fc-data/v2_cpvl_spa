@@ -125,37 +125,37 @@ export const Login = () => {
   };
 
   return (
-    <div className="relative min-h-screen w-full flex items-center justify-center overflow-hidden bg-slate-950">
+    <div className="relative min-h-screen w-full flex items-center justify-center overflow-hidden bg-background transition-colors duration-500">
       {/* Background Image with Overlay */}
       <div
         className="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat transition-transform duration-[20s] scale-110 animate-slow-zoom"
         style={{ backgroundImage: `url(${bgImage})` }}
       />
-      <div className="absolute inset-0 z-10 bg-gradient-to-br from-slate-950/45 via-slate-900/45 to-slate-950/35 backdrop-blur-[2px]" />
+      <div className="absolute inset-0 z-10 bg-gradient-to-br from-background/70 via-background/50 to-background/70 backdrop-blur-[2px]" />
 
       <div className="relative z-20 w-full max-w-md px-4 animate-fade-in-up">
         {/* Back button */}
         <button
           onClick={() => navigate("/")}
-          className="group mb-6 flex items-center gap-2 text-white/70 hover:text-white transition-colors duration-300 text-sm font-medium"
+          className="group mb-6 flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors duration-300 text-sm font-medium"
         >
-          <div className="p-1.5 rounded-full bg-white/10 group-hover:bg-white/20 transition-colors">
+          <div className="p-1.5 rounded-full bg-muted group-hover:bg-primary/20 group-hover:text-primary transition-colors">
             <ArrowLeft size={16} />
           </div>
           Voltar para o site
         </button>
 
-        <Card className="border-white/10 bg-white/5 backdrop-blur-xl shadow-2xl overflow-hidden glassmorphism">
+        <Card className="border-border/50 bg-card/50 backdrop-blur-xl shadow-2xl overflow-hidden glassmorphism">
           <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-primary to-transparent" />
 
           <CardHeader className="space-y-1 pb-6 text-center">
-            <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-2xl bg-primary/20 text-primary ring-1 ring-primary/30">
+            <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-2xl bg-primary/20 text-primary ring-1 ring-primary/30 icon-primary">
               <Users size={32} />
             </div>
-            <CardTitle className="text-3xl font-heading font-bold text-white tracking-tight">
+            <CardTitle className="text-3xl font-heading font-bold text-foreground tracking-tight">
               Área do Associado
             </CardTitle>
-            <CardDescription className="text-white/60 font-body text-base">
+            <CardDescription className="text-muted-foreground font-body text-base">
               Identifique-se para acessar sua conta
             </CardDescription>
           </CardHeader>
@@ -163,9 +163,9 @@ export const Login = () => {
           <CardContent className="space-y-4">
             <form id="login-form" onSubmit={handleLogin} className="space-y-4">
               <div className="space-y-2">
-                <Label htmlFor="email" className="text-white/80 text-sm font-medium ml-1">Usuário ou E-mail</Label>
+                <Label htmlFor="email" className="text-foreground/90 text-sm font-medium ml-1">Usuário ou E-mail</Label>
                 <div className="relative group">
-                  <div className="absolute left-3 top-1/2 -translate-y-1/2 text-white/40 group-focus-within:text-primary transition-colors">
+                  <div className="absolute left-3 top-1/2 -translate-y-1/2 text-muted-foreground/60 group-focus-within:text-primary transition-colors">
                     <Mail size={18} />
                   </div>
                   <Input
@@ -175,25 +175,25 @@ export const Login = () => {
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                     required
-                    className="bg-white/5 border-white/10 text-white placeholder:text-white/20 pl-10 h-12 focus:ring-primary focus:border-primary transition-all duration-300"
+                    className="bg-background/50 border-border/50 text-foreground placeholder:text-muted-foreground/40 pl-10 h-12 focus:ring-primary focus:border-primary transition-all duration-300"
                   />
                 </div>
               </div>
 
               <div className="space-y-2">
                 <div className="flex justify-between items-center ml-1">
-                  <Label htmlFor="password" className="text-white/80 text-sm font-medium">Senha</Label>
+                  <Label htmlFor="password" className="text-foreground/90 text-sm font-medium">Senha</Label>
                   <button
                     type="button"
                     onClick={handleForgotPassword}
                     disabled={isForgotLoading}
-                    className="text-xs text-white/80 hover:text-white transition-colors disabled:opacity-50 cursor-pointer"
+                    className="text-xs text-muted-foreground hover:text-foreground transition-colors disabled:opacity-50 cursor-pointer"
                   >
                     {isForgotLoading ? "Solicitando..." : "Esqueceu a senha?"}
                   </button>
                 </div>
                 <div className="relative group">
-                  <div className="absolute left-3 top-1/2 -translate-y-1/2 text-white/40 group-focus-within:text-primary transition-colors">
+                  <div className="absolute left-3 top-1/2 -translate-y-1/2 text-muted-foreground/60 group-focus-within:text-primary transition-colors">
                     <Lock size={18} />
                   </div>
                   <Input
@@ -202,7 +202,7 @@ export const Login = () => {
                     value={password}
                     onChange={(e) => setPassword(e.target.value)}
                     required
-                    className="bg-white/5 border-white/10 text-white placeholder:text-white/20 pl-10 h-12 focus:ring-primary focus:border-primary transition-all duration-300"
+                    className="bg-background/50 border-border/50 text-foreground placeholder:text-muted-foreground/40 pl-10 h-12 focus:ring-primary focus:border-primary transition-all duration-300"
                   />
                 </div>
               </div>
@@ -229,7 +229,7 @@ export const Login = () => {
               <Button
                 type="submit"
                 disabled={isLoggingIn || loading}
-                className="w-full h-12 text-base font-bold bg-primary hover:bg-primary/90 text-primary-foreground shadow-lg shadow-primary/20 transition-all duration-300 active:scale-[0.98] cursor-pointer"
+                className="w-full h-12 text-base font-bold bg-primary hover:bg-primary/90 text-primary-foreground shadow-lg shadow-primary/20 transition-all duration-300 active:scale-[0.98] cursor-pointer border border-white/10"
               >
                 {isLoggingIn || loading ? (
                   <>
@@ -243,12 +243,12 @@ export const Login = () => {
             </form>
           </CardContent>
 
-          <CardFooter className="flex flex-col border-t border-white/5 bg-white/5 px-6 py-4">
-            <p className="text-center text-sm text-white font-body">
+          <CardFooter className="flex flex-col border-t border-border/50 bg-muted/30 px-6 py-4">
+            <p className="text-center text-sm text-muted-foreground font-body">
               Ainda não é associado?{" "}
               <button
                 onClick={() => navigate("/signup")}
-                className="text-white/75 hover:underline font-medium transition-colors cursor-pointer"
+                className="text-primary hover:underline font-medium transition-colors cursor-pointer"
               >
                 Cadastre-se.
               </button>
@@ -256,7 +256,7 @@ export const Login = () => {
           </CardFooter>
         </Card>
 
-        <p className="mt-8 text-center text-xs text-white/60 font-body">
+        <p className="mt-8 text-center text-xs text-muted-foreground/60 font-body">
           © {new Date().getFullYear()} Clube Poçoscaldense de Vôo Livre. Todos os direitos reservados.
         </p>
       </div>

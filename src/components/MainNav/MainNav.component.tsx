@@ -76,7 +76,7 @@ const MainNav = ({ onLogout, onNav, allowedRoutes, userData }: IProps) => {
             <div className="hidden md:flex items-center gap-2">
               <DropdownMenu>
                 <DropdownMenuTrigger asChild>
-                  <Button variant="ghost" className="text-muted-foreground hover:text-foreground hover:bg-accent gap-2 rounded-xl h-10 font-bold transition-all">
+                  <Button variant="ghost" className="text-muted-foreground btn-hover-effect gap-2 rounded-xl h-10 font-bold">
                     <LayoutDashboard className="w-4 h-4" />
                     Menu do Piloto
                     <ChevronDown className="w-3 h-3 opacity-50" />
@@ -102,7 +102,7 @@ const MainNav = ({ onLogout, onNav, allowedRoutes, userData }: IProps) => {
           {/* Central Greeting */}
           <div className="hidden md:flex flex-1 items-center justify-center">
             {greeting && (
-              <div className="bg-accent/50 px-6 py-2 rounded-full border border-border flex items-center gap-3 animate-in fade-in slide-in-from-top-2 duration-700">
+              <div className="bg-primary/5 px-6 py-2 rounded-full border border-primary/20 flex items-center gap-3 animate-in fade-in slide-in-from-top-2 duration-700">
                 <greeting.Icon className="w-4 h-4 text-primary" />
                 <span className="text-foreground font-['Flamenco'] text-lg font-medium tracking-wide">
                   {greeting.text}
@@ -116,7 +116,7 @@ const MainNav = ({ onLogout, onNav, allowedRoutes, userData }: IProps) => {
             {/* Theme Toggle */}
             <DropdownMenu>
               <DropdownMenuTrigger asChild>
-                <Button variant="ghost" size="icon" className="text-foreground hover:bg-accent rounded-xl w-10 h-10 transition-all">
+                <Button variant="ghost" size="icon" className="text-foreground btn-hover-effect rounded-xl w-10 h-10 transition-all">
                   <Sun className="h-[1.2rem] w-[1.2rem] rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
                   <Moon className="absolute h-[1.2rem] w-[1.2rem] rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
                   <span className="sr-only">Alternar tema</span>

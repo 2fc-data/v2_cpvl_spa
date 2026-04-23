@@ -8,7 +8,6 @@ import {
   User,
   Trash2,
   ChevronRight,
-  Search,
   Filter,
   CheckCircle2,
   XCircle,
@@ -306,9 +305,9 @@ export const Pilots = () => {
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6">
           <div className="space-y-4">
             <nav className="flex items-center gap-2 text-sm font-medium text-muted-foreground/60">
-              <button onClick={() => navigate('/dashboard')} className="hover:text-primary transition-colors">Dashboard</button>
+              <button onClick={() => navigate('/dashboard')} className="hover:text-primary transition-colors font-bold">Dashboard</button>
               <ChevronRight className="w-3 h-3" />
-              <span className="text-primary font-bold">Pilotos</span>
+              <span className="text-primary font-black">Pilotos</span>
             </nav>
             <div className="space-y-1">
               <h1 className="text-4xl font-black tracking-tight text-slate-900">Gestão de Pilotos</h1>
@@ -357,16 +356,13 @@ export const Pilots = () => {
 
         {/* Search & Bulk Actions */}
         <div className="flex flex-col gap-4">
-          <div className="relative group">
-            <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-slate-400 group-focus-within:text-primary transition-colors" />
-            <SearchField
-              value={searchTerm}
-              onChange={setSearchTerm}
-              placeholder="Buscar por nome, CPF ou email..."
-              fullWidth
-              className="pl-12 h-14 bg-white border-slate-100 hover:border-primary/20 focus:border-primary/30 transition-all rounded-2xl shadow-sm text-lg font-medium"
-            />
-          </div>
+          <SearchField
+            value={searchTerm}
+            onChange={setSearchTerm}
+            placeholder="Buscar por nome, CPF ou email..."
+            fullWidth
+            inputClassName="h-14 bg-white dark:bg-card border-border hover:border-primary/20 focus:border-primary/30 transition-all rounded-2xl shadow-sm text-lg font-medium"
+          />
 
           {/* Bulk Action Bar */}
           {statusType === 'statusCadastral' && statusFilter.toLowerCase() === 'pendente' && selectedUserIds.length > 0 && (
@@ -378,7 +374,7 @@ export const Pilots = () => {
                 <span className="font-bold text-primary">Pilotos selecionados para ação em lote</span>
               </div>
               <div className="flex gap-2">
-                <Button variant="outline" onClick={() => setSelectedUserIds([])} className="rounded-xl font-bold bg-white/50">Cancelar</Button>
+                <Button variant="outline" onClick={() => setSelectedUserIds([])} className="rounded-xl font-bold bg-white/50 btn-hover-effect">Cancelar</Button>
                 <Button onClick={() => handleBulkAction('filiado')} disabled={isBulkLoading} className="rounded-xl bg-green-600 hover:bg-green-700 font-bold gap-2">
                   <CheckCircle2 className="w-4 h-4" /> Autorizar
                 </Button>
@@ -407,7 +403,7 @@ export const Pilots = () => {
                 <span className="text-slate-500 font-bold text-sm">
                   {filteredPilots.length} {filteredPilots.length === 1 ? 'resultado' : 'resultados'}
                 </span>
-                <div className="flex items-center gap-2 text-xs font-bold text-primary bg-primary/5 px-3 py-1.5 rounded-full border border-primary/10">
+                <div className="flex items-center gap-2 text-xs font-bold text-primary bg-primary/5 px-3 py-1.5 rounded-full border border-primary/10 group-hover:bg-primary/10 transition-colors">
                   <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
                   Total Database: {pilotsData?.length || 0}
                 </div>
@@ -441,7 +437,7 @@ export const Pilots = () => {
 
                         <div className="flex-1 min-w-0">
                           <div className="flex items-center justify-between gap-2 mb-1">
-                            <h3 className="text-lg font-black text-slate-900 truncate tracking-tight">
+                            <h3 className="text-lg font-semibold text-foreground truncate">
                               {pilot.firstName} {pilot.lastName}
                             </h3>
                             {statusType === 'statusPayment' && (
@@ -452,11 +448,11 @@ export const Pilots = () => {
                           </div>
 
                           <div className="flex flex-wrap gap-x-4 gap-y-1">
-                            <div className="flex items-center gap-1.5 text-slate-400 font-medium text-xs">
+                            <div className="flex items-center gap-1.5 text-muted-foreground font-medium text-xs">
                               <Phone className="w-3 h-3" />
                               <span>{pilot.cellphone}</span>
                             </div>
-                            <div className="flex items-center gap-1.5 text-slate-400 font-medium text-xs">
+                            <div className="flex items-center gap-1.5 text-muted-foreground font-medium text-xs">
                               <Mail className="w-3 h-3" />
                               <span className="truncate max-w-[150px]">{pilot.email}</span>
                             </div>
@@ -497,7 +493,7 @@ export const Pilots = () => {
       {/* Floating Add Action */}
       <button
         aria-label="add-pilot"
-        className="fixed bottom-8 right-8 z-50 w-16 h-16 rounded-2xl bg-primary text-white shadow-2xl shadow-primary/30 flex items-center justify-center hover:scale-110 hover:shadow-primary/40 active:scale-95 transition-all group overflow-hidden"
+        className="fixed bottom-8 right-8 z-50 w-16 h-16 rounded-2xl bg-primary text-white shadow-2xl shadow-primary/30 flex items-center justify-center hover:scale-110 hover:shadow-primary/40 active:scale-95 transition-all group overflow-hidden border border-white/20"
       >
         <div className="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-500" />
         <Plus className="relative z-10 w-8 h-8 font-black" />

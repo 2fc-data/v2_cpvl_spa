@@ -114,7 +114,7 @@ export const PilotDetails = () => {
                 <ChevronRight className="w-3 h-3" />
               </>
             )}
-            <span className="text-primary font-bold">Perfil</span>
+            <span className="text-primary font-black">Perfil</span>
           </nav>
           <h1 className="text-3xl font-black tracking-tight text-slate-900 flex items-center gap-3">
             {isAdmin && (
@@ -197,25 +197,25 @@ export const PilotDetails = () => {
                   <Button
                     variant="outline"
                     onClick={() => setIsLicenseDataOpen(true)}
-                    className="inline-flex items-center gap-2 rounded-2xl font-black border-slate-100 text-slate-400 hover:text-primary hover:border-primary/20 hover:bg-primary/5 h-12"
+                    className="inline-flex items-center gap-2 rounded-2xl font-black border-slate-100 text-slate-400 btn-hover-effect h-12"
                   >
-                    <Settings className="w-4 h-4" /> Documentação
+                    <Settings className="w-4 h-4 icon-primary" /> Documentação
                   </Button>
 
                   <Button
                     variant="outline"
                     onClick={() => setIsEmergencyContactOpen(true)}
-                    className="inline-flex items-center gap-2 rounded-2xl font-black border-slate-100 text-slate-400 hover:text-primary hover:border-primary/20 hover:bg-primary/5 h-12"
+                    className="inline-flex items-center gap-2 rounded-2xl font-black border-slate-100 text-slate-400 btn-hover-effect h-12"
                   >
-                    <Settings className="w-4 h-4" /> Emergência
+                    <Settings className="w-4 h-4 icon-primary" /> Emergência
                   </Button>
 
                   <Button
                     variant="outline"
                     onClick={() => setIsEditModalOpen(true)}
-                    className="inline-flex items-center gap-2 rounded-2xl font-black border-slate-100 text-slate-400 hover:text-primary hover:border-primary/20 hover:bg-primary/5 h-12"
+                    className="inline-flex items-center gap-2 rounded-2xl font-black border-slate-100 text-slate-400 btn-hover-effect h-12"
                   >
-                    <Settings className="w-4 h-4" /> Perfil
+                    <Settings className="w-4 h-4 icon-primary" /> Perfil
                   </Button>
                 </div>
             </CardContent>
